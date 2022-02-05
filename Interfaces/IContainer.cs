@@ -2,7 +2,7 @@ namespace Garner.Interfaces;
 
 public interface IContainer
 {
-    public static IContainer? Instance { get; }
+    protected static IContainer _instance;
 
     public dynamic Get(string id);
 }

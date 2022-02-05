@@ -8,6 +8,11 @@ public class Container : IContainer
 {
     protected Dictionary<string, dynamic> _servicesDictionary;
 
+    protected Container(Dictionary<string, dynamic> servicesDictionary)
+    {
+        this._servicesDictionary = servicesDictionary;
+    }
+
     public dynamic Get(string id)
     {
         foreach (var item in this._servicesDictionary)
