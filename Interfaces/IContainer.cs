@@ -1,5 +1,3 @@
-using Garner.Exceptions;
-
 namespace Garner.Interfaces;
 
 public interface IContainer
