@@ -8,6 +8,10 @@
     <Version>1.0.0</Version>
     <Authors>Dmitry Shumilin</Authors>
     <Company>Chirontex</Company>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/chirontex/garner</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Description>Garner is a simple DI container implementation for .NET.</Description>
   </PropertyGroup>
 
 </Project>
