@@ -1,4 +1,4 @@
-# Garner v1.0.0
+# Garner v1.0.1
 __Garner__ is a simple DI container implementation for .NET.
 
 ![](https://img.shields.io/badge/.NET-6%2B-blue) ![](https://img.shields.io/badge/C%23-10%2B-yellow)
