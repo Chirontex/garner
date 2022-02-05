@@ -6,6 +6,10 @@ namespace Garner;
 
 public class Container : IContainer
 {
+    protected static Container? s_instance;
+
+    public static IServicesDictionaryFactory? ServicesDictionaryFactory { get; set; }
+
     protected Dictionary<string, dynamic> _servicesDictionary;
 
     protected Container(Dictionary<string, dynamic> servicesDictionary)
@@ -24,5 +28,24 @@ public class Container : IContainer
         }
 
         throw new NotFoundException($"Service {id} not found.");
+    }
+
+    public static Container GetInstance()
+    {
+        if (Container.s_instance != null)
+        {
+            return Container.s_instance;
+        }
+
+        if (Container.ServicesDictionaryFactory == null)
+        {
+            throw new NotFoundException(
+                "Services dictionary factory not found."
+            );
+        }
+
+        return Container.s_instance = new Container(
+            Container.ServicesDictionaryFactory.createServicesDictionary()
+        );
     }
 }
