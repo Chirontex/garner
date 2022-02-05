@@ -8,7 +8,27 @@ public class Container : IContainer
 {
     protected static Container? s_instance;
 
-    public static IServicesDictionaryFactory? ServicesDictionaryFactory { get; set; }
+    protected static IServicesDictionaryFactory? s_servicesDictionaryFactory;
+
+    public static IServicesDictionaryFactory? ServicesDictionaryFactory
+    {
+        get
+        {
+            return Container.s_servicesDictionaryFactory;
+        }
+
+        set
+        {
+            if (Container.s_servicesDictionaryFactory == null)
+            {
+                Container.s_servicesDictionaryFactory = value;
+            }
+
+            throw new NotAllowedException(
+                "Service dictionary factory redefining is meaningless. Create a new container with a new factory instead."
+            );
+        }
+    }
 
     protected Dictionary<string, dynamic> _servicesDictionary;
 
