@@ -50,7 +50,7 @@ public class ServicesDictionaryFactory : IServicesDictionaryFactory
 {
 	public Dictionary<string, dynamic> createServicesDictionary()
 	{
-		var dictionary = Dictionary<string, dynamic>()
+		var dictionary = new Dictionary<string, dynamic>()
 			{
 				["console_saying_service"] = new ConsoleSayingService(),
 			};
