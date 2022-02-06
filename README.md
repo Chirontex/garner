@@ -3,6 +3,10 @@ __Garner__ is a simple DI container implementation for .NET.
 
 ![](https://img.shields.io/badge/.NET-6%2B-blue) ![](https://img.shields.io/badge/C%23-10%2B-yellow)
 
+## Installation
+
+[Get it from NuGet.](https://www.nuget.org/packages/Garner/ "Get it from NuGet")
+
 ## How to use
 
 ##### Create your services:
