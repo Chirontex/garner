@@ -1,4 +1,4 @@
-# Garner v1.0.1
+# Garner v1.0.2
 __Garner__ is a simple DI container implementation for .NET.
 
 ![](https://img.shields.io/badge/.NET-6%2B-blue) ![](https://img.shields.io/badge/C%23-10%2B-yellow)
@@ -51,9 +51,9 @@ public class ServicesDictionaryFactory : IServicesDictionaryFactory
 	public Dictionary<string, dynamic> createServicesDictionary()
 	{
 		var dictionary = new Dictionary<string, dynamic>()
-			{
-				["console_saying_service"] = new ConsoleSayingService(),
-			};
+		{
+			["console_saying_service"] = new ConsoleSayingService(),
+		};
 		
 		dictionary.Add("Tom", new Tom(dictionary["console_saying_service"]));
 		

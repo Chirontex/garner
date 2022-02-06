@@ -23,10 +23,12 @@ public class Container : IContainer
             {
                 Container.s_servicesDictionaryFactory = value;
             }
-
-            throw new NotAllowedException(
-                "Service dictionary factory redefining is meaningless. Create a new container with a new factory instead."
-            );
+            else
+            {
+                throw new NotAllowedException(
+                    "Service dictionary factory redefining is meaningless. Create a new container with a new factory instead."
+                );
+            }
         }
     }
 
